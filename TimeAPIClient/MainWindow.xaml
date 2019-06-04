@@ -1,0 +1,28 @@
+﻿<Window x:Class="TimeAPIClient.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TimeAPIClient"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="448.613" Width="801.387">
+    <Grid>
+        <TabControl HorizontalAlignment="Left" Height="401" Margin="10,19,-0.4,0" VerticalAlignment="Top" Width="784">
+            <TabItem Header="Client">
+                <Grid  Background="#FFE5E5E5" Margin="0,0,0.4,-1" Height="373" VerticalAlignment="Top">
+                    <DataGrid Name="DataGridClient" HorizontalAlignment="Left" Height="373" VerticalAlignment="Top" Width="778"/>
+                </Grid>
+            </TabItem>
+            <TabItem Header="DescriptorEntries">
+                <Grid Background="#FFE5E5E5"/>
+            </TabItem>
+            <TabItem Header="Entries">
+                <Grid Background="#FFE5E5E5"/>
+            </TabItem>
+            <TabItem Header="Matter">
+                <Grid Background="#FFE5E5E5"/>
+            </TabItem>
+        </TabControl>
+
+    </Grid>
+</Window>
