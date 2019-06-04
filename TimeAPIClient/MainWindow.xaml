@@ -44,9 +44,6 @@
 
                 </Grid>
             </TabItem>
-            <TabItem Header="DescriptorEntries">
-                <Grid Background="#FFE5E5E5"/>
-            </TabItem>
             <TabItem Header="Descriptor">
                 <Grid Background="#FFE5E5E5">
                     <Grid.ColumnDefinitions>
@@ -54,9 +51,6 @@
                         <ColumnDefinition Width="758*"/>
                     </Grid.ColumnDefinitions>
                 </Grid>
-            </TabItem>
-            <TabItem Header="DescriptorEntries">
-                <Grid Background="#FFE5E5E5"/>
             </TabItem>
             <TabItem Header="Entries">
                 <Grid Background="#FFE5E5E5"/>
