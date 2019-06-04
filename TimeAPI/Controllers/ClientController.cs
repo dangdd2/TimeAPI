@@ -9,6 +9,7 @@ using TimeAPI.Models;
 
 namespace TimeAPI.Controllers
 {
+    [Route("")]
     [Route("api/[controller]")]
     [ApiController]
     public class ClientController : ControllerBase
