@@ -10,7 +10,8 @@ namespace TimeAPIClient
         public long Id { get; set; }
         public string Name { get; set; }
         public string Identifier { get; set; }
-        public IList<DescriptorEntry> DescriptorMatters { get; set; }
+        public IList<DescriptorEntry> DescriptorMatters { get; set; } 
+            //= new List<DescriptorEntry>();
 
     }
 }

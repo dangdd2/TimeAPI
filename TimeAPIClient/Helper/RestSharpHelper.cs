@@ -11,5 +11,6 @@ namespace TimeAPIClient.Helper
 
         public static string Client => "api/client/";
         public static string Matter => "api/matter/";
+        public static string Descriptor => "api/Descriptors/";
     }
 }

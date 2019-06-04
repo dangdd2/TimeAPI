@@ -14,6 +14,7 @@ namespace TimeAPIClient
         {
             InitializeComponent();
             LoadData();
+            InitDescriptorGrid();
         }
 
         private void LoadData()
@@ -66,6 +67,59 @@ namespace TimeAPIClient
             var editClient = new EditClient(clientRow.id);
             editClient.ShowDialog();
             LoadData();
+        }
+
+        // Descriptor
+        private void InitDescriptorGrid()
+        {
+            descriptorGrid.AutoGenerateColumns = false;
+            descriptorGrid.IsReadOnly = true;
+            descriptorGrid.ItemsSource = LoadDescriptorData();
+        }
+
+        private List<Descriptor> LoadDescriptorData()
+        {
+            var descriptor = new RestClient(RestSharpHelper.ApiUrl);
+            var request = new RestRequest(RestSharpHelper.Descriptor, Method.GET);
+            var data = descriptor.Execute<List<Descriptor>>(request).Data;
+            return data;
+        }
+
+        private void ButtonDescriptor_Click(object sender, RoutedEventArgs e)
+        {
+            var addDes = new EditDescriptor();
+            addDes.ShowDialog();
+            InitDescriptorGrid();
+        }
+
+        private void EditDescriptor_OnClick(object sender, RoutedEventArgs e)
+        {
+            var desRow = descriptorGrid.SelectedItem as Descriptor;
+
+            var editDes = new EditDescriptor(desRow.Id);
+            editDes.ShowDialog();
+            InitDescriptorGrid();
+        }
+
+        private void ButtonDescriptor_Delete(object sender, RoutedEventArgs e)
+        {
+            var messageBoxResult = MessageBox.Show("Are you sure?", "Delete Confirmation", System.Windows.MessageBoxButton.YesNo);
+            if (messageBoxResult == MessageBoxResult.Yes)
+            {
+                var desRow = descriptorGrid.SelectedItem as Descriptor;
+
+                var client = new RestClient(RestSharpHelper.ApiUrl);
+                var request = new RestRequest(RestSharpHelper.Descriptor + desRow.Id, Method.DELETE);
+                var response = client.Execute(request);
+                if (response.IsSuccessful)
+                {
+                    InitDescriptorGrid();
+                }
+                else
+                {
+                    MessageBox.Show(response.ErrorMessage, "Error");
+                }
+            }
         }
     }
 }

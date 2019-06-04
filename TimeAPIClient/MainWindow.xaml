@@ -16,9 +16,10 @@
                 <Grid  Background="#FFE5E5E5" Margin="0,0,21,-2" Height="374" VerticalAlignment="Top">
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="93*"/>
-                        <ColumnDefinition Width="665*"/>
+                        <ColumnDefinition Width="39*"/>
+                        <ColumnDefinition Width="626*"/>
                     </Grid.ColumnDefinitions>
-                    <DataGrid Name="dataGridClient" HorizontalAlignment="Left" Height="321" VerticalAlignment="Bottom" Width="748" Grid.ColumnSpan="2" Margin="0,0,0,10">
+                    <DataGrid Name="dataGridClient" HorizontalAlignment="Left" Height="321" VerticalAlignment="Bottom" Width="748" Grid.ColumnSpan="3" Margin="0,0,0,10">
                         <DataGrid.Columns>
                             <DataGridTextColumn Header="Id" Binding="{Binding id}"></DataGridTextColumn>
                             <DataGridTextColumn Header="Name" Width="100" Binding="{Binding name}"></DataGridTextColumn>
@@ -50,6 +51,28 @@
                         <ColumnDefinition Width="21*"/>
                         <ColumnDefinition Width="758*"/>
                     </Grid.ColumnDefinitions>
+                    <Button Content="Add" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="75" RenderTransformOrigin="-0.057,0.336" Grid.ColumnSpan="2" Click="ButtonDescriptor_Click"/>
+                    <DataGrid Name="descriptorGrid" HorizontalAlignment="Left" Height="314" Margin="-15,48,0,0" VerticalAlignment="Top" Width="783" Grid.ColumnSpan="2">
+                        <DataGrid.Columns>
+                            <DataGridTextColumn Header="Id" Binding="{Binding Id}"></DataGridTextColumn>
+                            <DataGridTextColumn Header="Name" Width="100" Binding="{Binding Name}"></DataGridTextColumn>
+                            <DataGridTextColumn Header="Identifier" Width="100" Binding="{Binding Identifier}"></DataGridTextColumn>
+                            <DataGridTemplateColumn Header="Edit row">
+                                <DataGridTemplateColumn.CellTemplate>
+                                    <DataTemplate>
+                                        <Button Name="EditClient"  Click="EditDescriptor_OnClick" Content="Edit"></Button>
+                                    </DataTemplate>
+                                </DataGridTemplateColumn.CellTemplate>
+                            </DataGridTemplateColumn>
+                            <DataGridTemplateColumn Header="Delete row">
+                                <DataGridTemplateColumn.CellTemplate>
+                                    <DataTemplate>
+                                        <Button Click="ButtonDescriptor_Delete" Content="Delete"></Button>
+                                    </DataTemplate>
+                                </DataGridTemplateColumn.CellTemplate>
+                            </DataGridTemplateColumn>
+                        </DataGrid.Columns>
+                    </DataGrid>
                 </Grid>
             </TabItem>
             <TabItem Header="Entries">

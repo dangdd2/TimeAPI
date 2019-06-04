@@ -61,6 +61,10 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Page Include="EditDescriptor.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="EditClient.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -75,6 +79,9 @@
     </Compile>
     <Compile Include="Descriptor.cs" />
     <Compile Include="DescriptorEntry.cs" />
+    <Compile Include="EditDescriptor.xaml.cs">
+      <DependentUpon>EditDescriptor.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Entry.cs" />
     <Compile Include="Matter.cs" />
     <Compile Include="Client.cs" />

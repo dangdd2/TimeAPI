@@ -1,0 +1,20 @@
+﻿<Window x:Class="TimeAPIClient.EditDescriptor"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TimeAPIClient"
+        mc:Ignorable="d"
+        Title="Edit descriptor" Height="342.527" Width="511.556">
+    <Grid Margin="0,0,3.6,-4">
+        <Label Content="Id" HorizontalAlignment="Left" Margin="92,58,0,0" VerticalAlignment="Top" Width="80"/>
+        <TextBox Name="txtId" HorizontalAlignment="Left" Height="23" Margin="177,61,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="219"/>
+        <Label Content="Name" HorizontalAlignment="Left" Margin="92,108,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.536,1"/>
+        <TextBox Name="txtName" HorizontalAlignment="Left" Height="23" Margin="177,110,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="219"/>
+        <Label Content="Identifier" HorizontalAlignment="Left" Margin="92,166,0,0" VerticalAlignment="Top"/>
+        <TextBox Name="txtIdentifier" HorizontalAlignment="Left" Height="23" Margin="177,166,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="219"/>
+        <Button Content="Save" HorizontalAlignment="Left" Margin="177,230,0,0" VerticalAlignment="Top" Width="98" Height="24" Click="Button_Click"/>
+        <Button Content="Cancel" HorizontalAlignment="Left" Margin="295,230,0,0" VerticalAlignment="Top" Width="101" Height="24" Click="Button_Click_1"/>
+
+    </Grid>
+</Window>
