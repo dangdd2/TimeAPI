@@ -46,7 +46,7 @@ namespace TimeAPIClient
                 var clientRow = dataGridClient.SelectedItem as Client;
 
                 var client = new RestClient(RestSharpHelper.ApiUrl);
-                var request = new RestRequest("api/client/"+ clientRow.id, Method.DELETE);
+                var request = new RestRequest(RestSharpHelper.Client + clientRow.id, Method.DELETE);
                 var response = client.Execute(request);
                 if (response.IsSuccessful)
                 {
@@ -56,7 +56,6 @@ namespace TimeAPIClient
                 {
                     MessageBox.Show(response.ErrorMessage,"Error");
                 }
-                
             }
         }
 

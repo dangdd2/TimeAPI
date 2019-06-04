@@ -72,6 +72,11 @@ namespace TimeAPIClient
                 name = txtName.Text,
                 identifier = txtIdentifier.Text
             });
+            HandleResponse(client, request);
+        }
+
+        private void HandleResponse(RestClient client, RestRequest request)
+        {
             var response = client.Execute(request);
             if (response.IsSuccessful)
             {
@@ -96,15 +101,7 @@ namespace TimeAPIClient
                 name = txtName.Text,
                 identifier = txtIdentifier.Text
             });
-            var response = client.Execute(request);
-            if (response.IsSuccessful)
-            {
-                this.Close();
-            }
-            else
-            {
-                MessageBox.Show(response.ErrorMessage);
-            }
+            HandleResponse(client, request);
         }
 
         private void Button_Click_1(object sender, RoutedEventArgs e)

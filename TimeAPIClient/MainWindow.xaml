@@ -44,19 +44,13 @@
 
                 </Grid>
             </TabItem>
-            <TabItem Header="DescriptorEntries">
-                <Grid Background="#FFE5E5E5"/>
-            </TabItem>
-            <TabItem Header="Descriptor">
+            <TabItem Header="Descriptor" HorizontalAlignment="Left" Margin="-2.4,-2,-2.2,0" Width="71">
                 <Grid Background="#FFE5E5E5">
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="21*"/>
                         <ColumnDefinition Width="758*"/>
                     </Grid.ColumnDefinitions>
                 </Grid>
-            </TabItem>
-            <TabItem Header="DescriptorEntries">
-                <Grid Background="#FFE5E5E5"/>
             </TabItem>
             <TabItem Header="Entries">
                 <Grid Background="#FFE5E5E5"/>
