@@ -73,6 +73,10 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="Descriptor.cs" />
+    <Compile Include="DescriptorEntry.cs" />
+    <Compile Include="Entry.cs" />
+    <Compile Include="Matter.cs" />
     <Compile Include="Client.cs" />
     <Compile Include="EditClient.xaml.cs">
       <DependentUpon>EditClient.xaml</DependentUpon>
